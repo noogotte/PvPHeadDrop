@@ -1,0 +1,7 @@
+name: ${project.name}
+version: ${project.version}-b${BUILD_NUMBER}
+description: ${project.description}
+author: noogotte
+website: https://github.com/noogotte/PvPHeadDrop
+
+main: fr.noogotte.pvpheaddrop.PvPHeadDrop
