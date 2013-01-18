@@ -21,6 +21,10 @@ public class PvPListener implements Listener {
     @EventHandler
     public void onEntityDeath(PlayerDeathEvent event) {
 
+        if (!event.getEntity().hasPermission("pvphead.drop")) {
+            return;
+        }
+
         Random rand = new Random();
         boolean drop = rand.nextInt(100) + 1 < plugin.getRate();
 

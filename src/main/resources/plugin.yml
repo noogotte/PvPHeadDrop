@@ -5,3 +5,8 @@ author: noogotte
 website: https://github.com/noogotte/PvPHeadDrop
 
 main: fr.noogotte.pvpheaddrop.PvPHeadDrop
+
+# Permissions
+permissions:
+    pvphead.drop:
+        default: true
