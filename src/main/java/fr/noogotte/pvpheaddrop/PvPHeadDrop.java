@@ -19,8 +19,4 @@ public class PvPHeadDrop extends JavaPlugin {
     public int getRate() {
         return getConfig().getInt("rate");
     }
-
-    public boolean isRenameAllowed() {
-        return getConfig().getBoolean("renameHeadToDropperName");
-    }
 }
