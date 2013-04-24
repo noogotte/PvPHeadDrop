@@ -1,5 +1,5 @@
 name: ${project.name}
-version: ${project.version}-b${BUILD_NUMBER}
+version: ${project.version}
 description: ${project.description}
 author: noogotte
 website: https://github.com/noogotte/PvPHeadDrop
@@ -9,4 +9,6 @@ main: fr.noogotte.pvpheaddrop.PvPHeadDrop
 # Permissions
 permissions:
     pvphead.drop:
+        default: true
+    pvphead.receive:
         default: true

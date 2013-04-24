@@ -2,8 +2,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>fr.noogotte</groupId>
 	<artifactId>pvpheaddrop</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.4</version>
 	<name>PvPHeadDrop</name>
+	<description>Allow your players to drop head when they death</description>
 	<url>https://github.com/noogotte/PvPHeadDrop</url>
 
 	<properties>
@@ -16,7 +17,7 @@
 		<dependency>
 			<groupId>org.bukkit</groupId>
 			<artifactId>bukkit</artifactId>
-			<version>1.4.5-R1.0</version>
+			<version>1.5.1-R0.3-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

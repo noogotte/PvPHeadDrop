@@ -16,7 +16,7 @@ public class PvPHeadDrop extends JavaPlugin {
         this.saveConfig();
     }
 
-    public int getRate() {
-        return getConfig().getInt("rate");
+    public double getRate() {
+        return getConfig().getDouble("rate");
     }
 }

@@ -20,22 +20,27 @@ public class PvPListener implements Listener {
 
     @EventHandler
     public void onEntityDeath(PlayerDeathEvent event) {
+        Player death = (Player) event.getEntity();
+        Player killer = death.getKiller();
 
-        if (!event.getEntity().hasPermission("pvphead.drop")) {
+        if (killer == null) {
+            return;
+        }
+
+        if (!death.hasPermission("pvphead.drop") 
+                || !killer.hasPermission("pvphead.receive")) {
             return;
         }
 
         Random rand = new Random();
-        boolean drop = rand.nextInt(100) + 1 < plugin.getRate();
+        boolean drop = rand.nextDouble() * 100 + 1 < plugin.getRate();
 
         if(!drop) {
             return;
         }
 
         ItemStack stack = new ItemStack(Material.SKULL_ITEM, 1, (short) 3);
-
         SkullMeta meta = (SkullMeta) stack.getItemMeta();
-        Player death = (Player) event.getEntity();
         meta.setOwner(death.getName());
         stack.setItemMeta(meta);
         event.getDrops().add(stack);
